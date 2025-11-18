@@ -45,7 +45,7 @@ body {
   padding: 0 16px;
 }
 
-.card-content .card-title {
+.card-content .title {
   font-weight: 700;
   font-size: 22px;
   line-height: 1.2;
@@ -53,7 +53,7 @@ body {
   color: var(--dark-navy);
 }
 
-.card-content .card-description {
+.card-content .description {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.4;
