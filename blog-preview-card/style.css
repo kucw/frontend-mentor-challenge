@@ -62,18 +62,15 @@ body {
   line-height: 1.5;
 }
 
-.card-content a {
-  text-decoration: none;
-}
-
-.card-content a .title {
+.card-content .title a {
   color: var(--dark-grey);
   font-size: 24px;
   font-weight: 800;
   line-height: 1.5;
+  text-decoration: none;
 }
 
-.card-content a:hover .title {
+.card-content .title a:hover {
   color: var(--yellow);
 }
 
