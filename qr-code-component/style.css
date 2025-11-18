@@ -36,6 +36,7 @@ body {
   border-radius: 10px;
 }
 
+/* Card Content */
 .card-content {
   display: flex;
   flex-direction: column;
@@ -44,7 +45,7 @@ body {
   padding: 0 16px;
 }
 
-.card-content h2 {
+.card-content .card-title {
   font-weight: 700;
   font-size: 22px;
   line-height: 1.2;
@@ -52,7 +53,7 @@ body {
   color: var(--dark-navy);
 }
 
-.card-content p {
+.card-content .card-description {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.4;
