@@ -1,8 +1,10 @@
 :root {
   --white: #ffffff;
-  --dark-navy: #1f314f;
-  --navy: #68778d;
-  --light-navy: #d5e1ef;
+  --stale-900: #1f314f;
+  --stale-500: #68778d;
+  --stale-300: #d5e1ef;
+  --text-preset1: 700 22px/1.2 "Outfit";
+  --text-preset2: 400 15px/1.4 "Outfit";
 }
 
 * {
@@ -13,7 +15,7 @@
 
 body {
   font-family: "Outfit", sans-serif;
-  background-color: var(--light-navy);
+  background-color: var(--stale-300);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -46,19 +48,12 @@ body {
 }
 
 .card-content .title {
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 1.2;
-  letter-spacing: 0;
-  color: var(--dark-navy);
+  color: var(--stale-900);
+  font: var(--text-preset1);
 }
 
 .card-content .description {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 1.4;
+  color: var(--stale-500);
+  font: var(--text-preset2);
   letter-spacing: 0.2px;
-  color: var(--navy);
 }
-
-
