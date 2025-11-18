@@ -1,8 +1,12 @@
 :root {
   --white: #ffffff;
   --yellow: #f4d04e;
-  --dark-grey: #111111;
-  --grey: #6b6b6b;
+  --gray-950: #111111;
+  --gray-500: #6b6b6b;
+  --text-preset1: 800 24px/1.5 'Figtree';
+  --text-preset2: 500 16px/1.5 'Figtree';
+  --text-preset3: 500 14px/1.5 'Figtree';
+  --text-preset3-bold: 800 14px/1.5 'Figtree';
 }
 
 * {
@@ -30,7 +34,7 @@ body {
   gap: 24px;
   border-radius: 20px;
   box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
-  border: 1px solid var(--dark-grey);
+  border: 1px solid var(--gray-950);
 }
 
 .card-image {
@@ -47,26 +51,23 @@ body {
 
 .card-content .tag {
   background-color: var(--yellow);
-  color: var(--dark-grey);
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.5;
+  color: var(--gray-950);
+  font: var(--text-preset3-bold);
   padding: 4px 12px;
   border-radius: 4px;
 }
 
 .card-content .publish-date {
-  color: var(--dark-grey);
+  color: var(--gray-950);
+  font: var(--text-preset3);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
 }
 
 .card-content .title a {
-  color: var(--dark-grey);
-  font-size: 24px;
-  font-weight: 800;
-  line-height: 1.5;
+  color: var(--gray-950);
+  font: var(--text-preset1);
   text-decoration: none;
 }
 
@@ -75,10 +76,8 @@ body {
 }
 
 .card-content .description {
-  color: var(--grey);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
+  color: var(--gray-500);
+  font: var(--text-preset2);
 }
 
 /* Card Author */
@@ -94,8 +93,6 @@ body {
 }
 
 .card-author .author-name {
-  color: var(--dark-grey);
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.5;
+  color: var(--gray-950);
+  font: var(--text-preset3-bold);
 }
