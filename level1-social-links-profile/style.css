@@ -33,7 +33,7 @@ body {
   align-items: center;
   gap: 24px;
   background-color: var(--grey-800);
-  padding: 24px;
+  padding: 40px;
   border-radius: 12px;
 }
 
