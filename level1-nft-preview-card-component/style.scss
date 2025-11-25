@@ -1,0 +1,127 @@
+$white: #ffffff;
+$black: #000000;
+$blue-950: #0d192c;
+$blue-900: #15263f;
+$blue-800: #2e405a;
+$blue-500: #8bacd9;
+$cyan-400: #00fff8;
+$text-preset-1: 600 22px/1.5 "Outfit";
+$text-preset-2: 300 18px/1.45 "Outfit";
+$text-preset-3: 400 16px/1.25 "Outfit";
+$text-preset-3-semibold: 600 16px/1.25 "Outfit";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue-950;
+}
+
+/* Card */
+.card {
+  width: 93%;
+  max-width: 350px;
+  background-color: $blue-900;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 15px;
+}
+
+/* NFT image */
+.nft-image-info {
+  img {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  /* TODO: 怎麼在 hover image 時會出現一個半透明遮罩 + icon？ */
+}
+
+/* NFT info */
+.nft-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .title a {
+    text-decoration: none;
+    font: $text-preset-1;
+    color: $white;
+
+    &:hover {
+      color: $cyan-400;
+    }
+  }
+
+  .description {
+    font: $text-preset-2;
+    color: $blue-500;
+  }
+}
+
+/* NFT price info */
+.nft-price-info {
+  display: flex;
+  justify-content: space-between;
+
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font: $text-preset-3-semibold;
+    color: $cyan-400;
+  }
+
+  .left-days {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font: $text-preset-3;
+    color: $blue-500;
+  }
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background-color: $blue-800;
+}
+
+/* Author */
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .image {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid $white;
+  }
+
+  .description {
+    font: $text-preset-3;
+    color: $blue-500;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      margin-left: 8px;
+    }
+
+    a:hover {
+      color: $cyan-400;
+    }
+  }
+}
