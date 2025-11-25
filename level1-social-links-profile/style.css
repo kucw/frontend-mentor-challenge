@@ -1,0 +1,102 @@
+:root {
+  --grey-900: #141414;
+  --grey-800: #1f1f1f;
+  --grey-700: #333333;
+  --green: #c4f82a;
+  --white: #ffffff;
+  --text-preset-1: 700 24px/1.5 "Inter";
+  --text-preset-2: 400 14px/1.5 "Inter";
+  --text-preset-2-bold: 700 14px/1.5 "Inter";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey-900);
+}
+
+/* Card */
+.card {
+  width: 87%;
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background-color: var(--grey-800);
+  padding: 24px;
+  border-radius: 12px;
+}
+
+/* Author */
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.author .image {
+  border-radius: 50%;
+  width: 88px;
+  height: 88px;
+}
+
+.author .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.author .profile .name {
+  font: var(--text-preset-1);
+  color: var(--white);
+}
+
+.author .profile .location {
+  font: var(--text-preset-2-bold);
+  color: var(--green);
+}
+
+.author .description {
+  font: var(--text-preset-2);
+  color: var(--white);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.social-links li {
+  list-style: none;
+}
+
+.social-links li a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font: var(--text-preset-2-bold);
+  color: var(--white);
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--grey-700);
+}
+
+.social-links li a:hover {
+  background-color: var(--green);
+  color: var(--grey-700);
+}
