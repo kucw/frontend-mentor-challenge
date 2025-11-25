@@ -3,8 +3,8 @@
   --stale-900: #1f314f;
   --stale-500: #68778d;
   --stale-300: #d5e1ef;
-  --text-preset1: 700 22px/1.2 "Outfit";
-  --text-preset2: 400 15px/1.4 "Outfit";
+  --text-preset-1: 700 22px/1.2 "Outfit";
+  --text-preset-2: 400 15px/1.4 "Outfit";
 }
 
 * {
@@ -49,11 +49,11 @@ body {
 
 .card-content .title {
   color: var(--stale-900);
-  font: var(--text-preset1);
+  font: var(--text-preset-1);
 }
 
 .card-content .description {
   color: var(--stale-500);
-  font: var(--text-preset2);
+  font: var(--text-preset-2);
   letter-spacing: 0.2px;
 }
