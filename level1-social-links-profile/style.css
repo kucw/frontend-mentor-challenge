@@ -71,6 +71,7 @@ body {
 .author .description {
   font: var(--text-preset-2);
   color: var(--white);
+  text-align: center;
 }
 
 /* Social Links */
