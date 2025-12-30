@@ -22,14 +22,14 @@ $green-700: #1a4032;
 @mixin text-preset-3 {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.6;
 }
 
 @mixin text-preset-4 {
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: 5px;
 }
@@ -37,8 +37,9 @@ $green-700: #1a4032;
 @mixin text-preset-5 {
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
+  text-decoration: line-through;
 }
 
 * {
@@ -118,7 +119,6 @@ body {
   .origin-price {
     @include text-preset-5;
     color: $grey;
-    text-decoration: line-through;
   }
 }
 
