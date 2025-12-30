@@ -1,0 +1,173 @@
+$black: #1c232b;
+$grey: #6c7289;
+$cream: #f2eae2;
+$white: #ffffff;
+$green-500: #3d8168;
+$green-700: #1a4032;
+
+@mixin text-preset-1 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@mixin text-preset-2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+@mixin text-preset-3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+@mixin text-preset-4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 5px;
+}
+
+@mixin text-preset-5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $cream;
+}
+
+/* Card */
+.card {
+  width: 93%;
+  max-width: 600px;
+  border-radius: 8px;
+  background-color: $white;
+  margin: 80px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card-picture img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Card Content */
+.card-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card Info */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .label {
+    @include text-preset-4;
+    text-transform: uppercase;
+    color: $grey;
+  }
+
+  .title {
+    @include text-preset-1;
+    color: $black;
+  }
+
+  .description {
+    @include text-preset-3;
+    color: $grey;
+  }
+}
+
+/* Price */
+.price-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .promo-price {
+    @include text-preset-1;
+    color: $green-500;
+  }
+
+  .origin-price {
+    @include text-preset-5;
+    color: $grey;
+    text-decoration: line-through;
+  }
+}
+
+/* Checkout Button */
+.checkout-button {
+  background-color: $green-500;
+  color: $white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+
+  span {
+    @include text-preset-2;
+  }
+
+  &:hover {
+    background-color: $green-700;
+  }
+}
+
+/* RWD for Desktop & Tablet */
+@media screen and (min-width: 768px) {
+  .card {
+    // 兩欄，且平均分配寬度
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-content {
+    gap: 32px;
+  }
+
+  .card-picture img {
+    // 關掉右上角和右下角的圓角
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+
+    // 圖片等比例放大至填滿父元素的寬度高度，會裁切
+    height: 100%;
+    object-fit: cover;
+  }
+}
+

@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2eae2;
+}
+
+/* Card */
+.card {
+  width: 93%;
+  max-width: 600px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin: 80px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card-picture img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Card Content */
+.card-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card Info */
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.card-info .label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #6c7289;
+}
+.card-info .title {
+  font-family: "Fraunces", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: #1c232b;
+}
+.card-info .description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #6c7289;
+}
+
+/* Price */
+.price-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.price-info .promo-price {
+  font-family: "Fraunces", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  color: #3d8168;
+}
+.price-info .origin-price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #6c7289;
+  text-decoration: line-through;
+}
+
+/* Checkout Button */
+.checkout-button {
+  background-color: #3d8168;
+  color: #ffffff;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.checkout-button img {
+  width: 18px;
+  height: 18px;
+}
+.checkout-button span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.checkout-button:hover {
+  background-color: #1a4032;
+}
+
+/* RWD for Desktop & Tablet */
+@media screen and (min-width: 768px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-content {
+    gap: 32px;
+  }
+  .card-picture img {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
