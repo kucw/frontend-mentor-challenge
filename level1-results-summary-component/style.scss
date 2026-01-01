@@ -168,8 +168,13 @@ body {
       color: v.$white;
       @include v.text-preset-5-bold;
       border-radius: 128px;
+      border: none;
       padding: 16.5px 0;
       cursor: pointer;
+
+      &:hover {
+        @include v.gradient-2;
+      }
     }
   }
 }
