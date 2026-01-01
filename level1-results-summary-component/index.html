@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <title>Results summary component</title>
+  
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+        rel="stylesheet">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="card">
+    <!-- Result -->
+    <div class="result-container">
+      <div class="result-content">
+        <p class="your-result">Your Result</p>
+        <div class="score-container">
+          <div class="score-content">
+            <h2>76</h2>
+            <p>of 100</p>
+          </div>
+        
+        </div>
+        <div class="feedback">
+          <h2 class="title">Great</h2>
+          <p class="description">You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Summary -->
+    <div class="summary-container">
+      <div class="summary-content">
+        <p class="title">Summary</p>
+        <div class="bars">
+          <div class="bar bar-red">
+            <div class="bar-content">
+              <img src="images/icon-reaction.svg" alt="reaction icon"/>
+              <span>Reaction</span>
+            </div>
+            <div class="bar-score">
+              <span>80</span>
+              <span>/ 100</span>
+            </div>
+          </div>
+          <div class="bar bar-yellow">
+            <div class="bar-content">
+              <img src="images/icon-memory.svg" alt="memory icon"/>
+              <span>Memory</span>
+            </div>
+            <div class="bar-score">
+              <span>92</span>
+              <span>/ 100</span>
+            </div>
+          </div>
+          <div class="bar bar-green">
+            <div class="bar-content">
+              <img src="images/icon-verbal.svg" alt="verbal icon"/>
+              <span>Verbal</span>
+            </div>
+            <div class="bar-score">
+              <span>61</span>
+              <span>/ 100</span>
+            </div>
+          </div>
+          <div class="bar bar-blue">
+            <div class="bar-content">
+              <img src="images/icon-visual.svg" alt="visual icon"/>
+              <span>Visual</span>
+            </div>
+            <div class="bar-score">
+              <span>73</span>
+              <span>/ 100</span>
+            </div>
+          </div>
+        </div>
+        <button class="continue-button">Continue</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
