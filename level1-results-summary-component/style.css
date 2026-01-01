@@ -247,6 +247,7 @@ body {
   }
   .summary-container .summary-content {
     width: 77%;
+    gap: 32px;
   }
   .summary-container .summary-content .title {
     font-family: "Hanken Grotesk", sans-serif;
