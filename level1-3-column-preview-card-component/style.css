@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* Color */
+/* Screen */
+/* Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  width: 87%;
+  margin: 88px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .card-container {
+    width: 79%;
+  }
+}
+@media (min-width: 1200px) {
+  .card-container {
+    width: 64%;
+    max-width: 921px;
+    height: 500px;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.card {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 32px;
+}
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+}
+@media (min-width: 1200px) {
+  .card .card-content {
+    height: 100%;
+  }
+}
+.card .card-content .title {
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #f2f2f2;
+}
+.card .card-content .description {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #ffffff;
+  opacity: 75%;
+}
+.card .card-content .learn-more {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+  text-decoration: none;
+  color: inherit;
+  background-color: #f2f2f2;
+  padding: 8px 32px;
+  border-radius: 25px;
+}
+.card .card-content .learn-more:hover {
+  color: #ffffff;
+  background-color: inherit;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+@media (min-width: 1200px) {
+  .card .card-content .learn-more {
+    margin-top: auto;
+  }
+}
+
+.card-gold {
+  background-color: #e28625;
+  color: #e28625;
+  /* 順時針 Top-Left, Top-Right, Bottom-Right, Bottom-Left */
+  border-radius: 8px 8px 0 0;
+}
+@media (min-width: 1200px) {
+  .card-gold {
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.card-cyan {
+  background-color: #006971;
+  color: #006971;
+}
+
+.card-green {
+  background-color: #004140;
+  color: #004140;
+  border-radius: 0 0 8px 8px;
+}
+@media (min-width: 1200px) {
+  .card-green {
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

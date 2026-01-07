@@ -1,0 +1,30 @@
+/* Color */
+$white: #ffffff;
+$black: #000000;
+$gray-100: #f2f2f2;
+$green-950: #004140;
+$green-500: #19b89d;
+$cyan-800: #006971;
+$cyan-500: #26b5c0;
+$gold-500: #e28625;
+$gold-200: #ffd473;
+
+/* Screen */
+$tablet: 768px;
+$desktop: 1200px;
+
+/* Typography */
+@mixin text-preset-1 {
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+@mixin text-preset-2 {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+}
+

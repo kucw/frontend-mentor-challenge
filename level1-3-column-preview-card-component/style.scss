@@ -1,0 +1,113 @@
+@use 'variables' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  width: 87%;
+  margin: 88px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: v.$tablet) {
+    width: 79%;
+  }
+
+  @media (min-width: v.$desktop) {
+    width: 64%;
+    max-width: 921px;
+    height: 500px;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.card {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 32px;
+
+  // Content
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+
+    @media (min-width: v.$desktop) {
+      // 撐滿卡片高度
+      height: 100%;
+    }
+
+    .title {
+      @include v.text-preset-1;
+      color: v.$gray-100;
+    }
+
+    .description {
+      @include v.text-preset-2;
+      color: v.$white;
+      opacity: 75%;
+    }
+
+    // Learn more button
+    .learn-more {
+      @include v.text-preset-2;
+      text-decoration: none;
+      color: inherit;
+      background-color: v.$gray-100;
+      padding: 8px 32px;
+      border-radius: 25px;
+
+      &:hover {
+        color: v.$white;
+        background-color: inherit;
+        box-shadow: inset 0 0 0 2px v.$white;
+      }
+
+      @media (min-width: v.$desktop) {
+        // 自動往上填滿剩餘空間，效果類似 space-between
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+.card-gold {
+  background-color: v.$gold-500;
+  color: v.$gold-500;
+  /* 順時針 Top-Left, Top-Right, Bottom-Right, Bottom-Left */
+  border-radius: 8px 8px 0 0;
+
+  @media (min-width: v.$desktop) {
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.card-cyan {
+  background-color: v.$cyan-800;
+  color: v.$cyan-800;
+}
+
+.card-green {
+  background-color: v.$green-950;
+  color: v.$green-950;
+  border-radius: 0 0 8px 8px;
+
+  @media (min-width: v.$desktop) {
+    border-radius: 0 8px 8px 0;
+  }
+}
