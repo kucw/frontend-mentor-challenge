@@ -1,0 +1,193 @@
+@use 'variables' as v;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: v.$background-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text */
+.text-container {
+  margin: 56px 0 0 0;
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+
+  @media (min-width: v.$tablet) {
+    margin: 80px 0 0 0;
+    width: 522px;
+  }
+
+  .subtitle {
+    @include v.text-preset-2-mobile;
+    color: v.$grey-500;
+
+    @media (min-width: v.$tablet) {
+      @include v.text-preset-2;
+    }
+  }
+
+  .title {
+    @include v.text-preset-1-mobile;
+    color: v.$grey-500;
+
+    @media (min-width: v.$tablet) {
+      @include v.text-preset-1;
+    }
+  }
+
+  .description {
+    @include v.text-preset-4-mobile;
+    color: v.$grey-500;
+
+    @media (min-width: v.$tablet) {
+      @include v.text-preset-4;
+    }
+  }
+}
+
+/* Card */
+.card-container {
+  margin: 60px 0 46px 0;
+  width: 84%;
+  display: grid;
+  justify-items: center;
+  gap: 32px;
+
+  @media (min-width: v.$tablet) {
+    grid-template-columns: repeat(2, 320px);  // 欄寬固定為卡片寬度
+    margin: 80px 0;
+    width: auto;
+  }
+
+  @media (min-width: v.$desktop) {
+    grid-template-columns: repeat(3, 320px);  // 欄寬固定為卡片寬度
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  background-color: v.$white;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
+  max-width: 320px;
+
+  // For Card Bar
+  position: relative; /* 必備，讓 before 子元素能定位 */
+  overflow: hidden;  /* 當 before 子元素的範圍超出 card 本身時，全部裁掉，所以 Bar 的直角不會超出卡片的圓角 */
+
+  // Card bar
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Bar 的高度 */
+  }
+
+  // Card title, description, image
+  .card-title {
+    @include v.text-preset-3;
+    color: v.$grey-500;
+  }
+
+  .card-description {
+    @include v.text-preset-5;
+    color: v.$grey-400;
+  }
+
+  img {
+    align-self: end;
+  }
+}
+
+// 清空之前的 grid item 設定
+@mixin reset-grid-item {
+  /* 「歸零」子層，取消跨欄跨列，讓它乖乖排隊 */
+  grid-column: auto;
+  grid-row: auto;
+  /* 如果之前用的是 grid-area，也直接設為 auto */
+  grid-area: auto;
+  /* 置中 */
+  align-self: center;
+  justify-self: center;
+}
+
+/* 每一張卡, used for Grid template */
+.card-cyan {
+  &::before {
+    background-color: v.$cyan;
+  }
+
+  @media (min-width: v.$tablet) {
+    justify-self: end;
+  }
+
+  @media (min-width: v.$desktop) {
+    @include reset-grid-item;
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: end;
+  }
+}
+
+.card-red {
+  &::before {
+    background-color: v.$red;
+  }
+
+  @media (min-width: v.$tablet) {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+  }
+
+  @media (min-width: v.$desktop) {
+    @include reset-grid-item;
+  }
+}
+
+.card-orange {
+  &::before {
+    background-color: v.$orange;
+  }
+
+  @media (min-width: v.$tablet) {
+    justify-self: start;
+  }
+
+  @media (min-width: v.$desktop) {
+    @include reset-grid-item;
+    grid-row: 2;
+  }
+}
+
+.card-blue {
+  &::before {
+    background-color: v.$blue;
+  }
+
+  @media (min-width: v.$tablet) {
+    grid-column: 1 / span 2;
+  }
+
+  @media (min-width: v.$desktop) {
+    @include reset-grid-item;
+    grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: start;
+  }
+}
