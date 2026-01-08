@@ -28,21 +28,22 @@ body {
     width: 522px;
   }
 
-  .subtitle {
+  .title {
     @include v.text-preset-2-mobile;
     color: v.$grey-500;
 
     @media (min-width: v.$tablet) {
       @include v.text-preset-2;
     }
-  }
 
-  .title {
-    @include v.text-preset-1-mobile;
-    color: v.$grey-500;
+    span {
+      display: block;
+      @include v.text-preset-1-mobile;
+      color: v.$grey-500;
 
-    @media (min-width: v.$tablet) {
-      @include v.text-preset-1;
+      @media (min-width: v.$tablet) {
+        @include v.text-preset-1;
+      }
     }
   }
 
