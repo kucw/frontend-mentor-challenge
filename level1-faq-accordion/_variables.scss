@@ -1,0 +1,33 @@
+/* Color */
+$white: #ffffff;
+$black: #000000;
+$purple-950: #301534;
+$purple-600: #8B6990;
+$purple-100: #F8EEFF;
+$violet-600: #AD28EB;
+
+/* Typography */
+$font-family: "Work Sans", sans-serif;
+@mixin text-preset-1 {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}

@@ -1,0 +1,79 @@
+@use 'variables' as v;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: v.$purple-100;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  background-color: v.$white;
+  width: 87%;
+  max-width: 600px;
+  padding: 40px;
+  box-shadow: 0 32px 56px 0 rgba(80, 0, 118, 0.1);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+
+  h1 {
+    @include v.text-preset-1;
+  }
+}
+
+/* Questions */
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  /* Question */
+  .question {
+    cursor: pointer;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+
+      h2 {
+        @include v.text-preset-2;
+      }
+    }
+
+    .answer {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    .answer.active {
+      max-height: initial;
+      margin-top: 24px;
+    }
+  }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: v.$purple-100;
+  }
+}
+

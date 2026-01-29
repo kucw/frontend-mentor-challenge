@@ -1,0 +1,83 @@
+/* Color */
+/* Typography */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8EEFF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  width: 87%;
+  max-width: 600px;
+  padding: 40px;
+  box-shadow: 0 32px 56px 0 rgba(80, 0, 118, 0.1);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.header h1 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 66px;
+  letter-spacing: 0;
+}
+
+/* Questions */
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* Question */
+}
+.questions .question {
+  cursor: pointer;
+}
+.questions .question .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.questions .question .title h2 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+.questions .question .answer {
+  max-height: 0;
+  overflow: hidden;
+}
+.questions .question .answer.active {
+  max-height: initial;
+  margin-top: 24px;
+}
+.questions {
+  /* Divider */
+}
+.questions .divider {
+  height: 1px;
+  background: #F8EEFF;
+}
+
+/*# sourceMappingURL=style.css.map */
