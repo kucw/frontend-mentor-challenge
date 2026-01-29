@@ -56,10 +56,19 @@ body {
 
       h2 {
         @include v.text-preset-2;
+        color: v.$purple-950;
+      }
+
+      &:hover {
+        h2 {
+          color: v.$violet-600;
+        }
       }
     }
 
     .answer {
+      @include v.text-preset-3;
+      color: v.$purple-600;
       max-height: 0;
       overflow: hidden;
     }

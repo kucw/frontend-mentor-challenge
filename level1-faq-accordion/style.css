@@ -63,8 +63,18 @@ body {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0;
+  color: #301534;
+}
+.questions .question .title:hover h2 {
+  color: #AD28EB;
 }
 .questions .question .answer {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #8B6990;
   max-height: 0;
   overflow: hidden;
 }
