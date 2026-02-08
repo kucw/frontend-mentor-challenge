@@ -100,17 +100,24 @@ body {
     height: 4px; /* Bar 的高度 */
   }
 
-  // Card title, description, image
-  .card-title {
-    @include v.text-preset-3;
-    color: v.$grey-500;
+  // Card content (title, description)
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .card-title {
+      @include v.text-preset-3;
+      color: v.$grey-500;
+    }
+
+    .card-description {
+      @include v.text-preset-5;
+      color: v.$grey-400;
+    }
   }
 
-  .card-description {
-    @include v.text-preset-5;
-    color: v.$grey-400;
-  }
-
+  // image
   img {
     align-self: end;
   }

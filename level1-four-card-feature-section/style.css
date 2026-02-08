@@ -125,14 +125,19 @@ body {
   width: 100%;
   height: 4px; /* Bar 的高度 */
 }
-.card .card-title {
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card .card-content .card-title {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.35;
   color: #4d4f62;
 }
-.card .card-description {
+.card .card-content .card-description {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 13px;
