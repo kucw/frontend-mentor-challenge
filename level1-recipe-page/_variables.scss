@@ -1,0 +1,50 @@
+/* Color */
+$rose-800: #7A284E;
+$rose-50: #FFF7FB;
+$stone-900: #312E2C;
+$stone-600: #5F564D;
+$stone-150: #E3DDD7;
+$stone-100: #F3E5D7;
+$brown-800: #854632;
+$white: #FFFFFF;
+
+/* Typography */
+@mixin text-preset-1 {
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4-bold {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}

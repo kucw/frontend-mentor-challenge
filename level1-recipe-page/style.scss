@@ -1,0 +1,145 @@
+@use 'variables' as v;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: v.$stone-100;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* main */
+main {
+  width: 80%;
+  max-width: 736px;
+  background: v.$white;
+  border-radius: 24px;
+  padding: 40px;
+  margin: 128px auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  img {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+/* Article */
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  // Header in Article
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    h1 {
+      @include v.text-preset-1;
+      color: v.$stone-900;
+    }
+
+    p {
+      @include v.text-preset-4;
+      color: v.$stone-600;
+    }
+  }
+
+  // Prepare Section
+  section.prepare-section {
+    background-color: v.$rose-50;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h2 {
+      @include v.text-preset-3;
+      color: v.$rose-800;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      // 點變成內容的一部分
+      list-style-position: inside;
+
+      li {
+        padding-left: 8px;
+        @include v.text-preset-4;
+        color: v.$stone-600;
+
+        // 改變點的顏色
+        &::marker {
+          color: v.$rose-800;
+        }
+      }
+    }
+  }
+
+  // 分隔線
+  hr {
+    border: none;
+    border-top: 1px solid v.$stone-150;
+  }
+
+  // 其他 section
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    h2 {
+      @include v.text-preset-2;
+      color: v.$brown-800;
+    }
+
+    ul, ol {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      list-style-position: inside;
+    }
+
+    li {
+      padding-left: 8px;
+      @include v.text-preset-4;
+      color: v.$stone-600;
+
+      &::marker {
+        color: v.$brown-800;
+      }
+    }
+
+    p {
+      @include v.text-preset-4;
+      color: v.$stone-600;
+    }
+
+    // 表格
+    table {
+      td:nth-child(1) {
+        @include v.text-preset-4;
+        color: v.$stone-600;
+      }
+      td:nth-child(2) {
+        @include v.text-preset-4-bold;
+        color: v.$brown-800;
+      }
+    }
+  }
+}

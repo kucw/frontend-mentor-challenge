@@ -1,0 +1,155 @@
+/* Color */
+/* Typography */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F3E5D7;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* main */
+main {
+  width: 80%;
+  max-width: 736px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 40px;
+  margin: 128px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+main img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Article */
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+article header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+article header h1 {
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #312E2C;
+}
+article header p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #5F564D;
+}
+article section.prepare-section {
+  background-color: #FFF7FB;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+article section.prepare-section h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #7A284E;
+}
+article section.prepare-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style-position: inside;
+}
+article section.prepare-section ul li {
+  padding-left: 8px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #5F564D;
+}
+article section.prepare-section ul li::marker {
+  color: #7A284E;
+}
+article hr {
+  border: none;
+  border-top: 1px solid #E3DDD7;
+}
+article section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+article section h2 {
+  font-family: "Young Serif", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #854632;
+}
+article section ul, article section ol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style-position: inside;
+}
+article section li {
+  padding-left: 8px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #5F564D;
+}
+article section li::marker {
+  color: #854632;
+}
+article section p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #5F564D;
+}
+article section table td:nth-child(1) {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #5F564D;
+}
+article section table td:nth-child(2) {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #854632;
+}
+
+/*# sourceMappingURL=style.css.map */
