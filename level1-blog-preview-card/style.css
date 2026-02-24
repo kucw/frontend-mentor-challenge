@@ -9,7 +9,9 @@
   --text-preset-3-bold: 800 14px/1.5 'Figtree';
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

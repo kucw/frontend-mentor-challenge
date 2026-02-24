@@ -10,7 +10,9 @@ $text-preset-2: 300 18px/1.45 "Outfit";
 $text-preset-3: 400 16px/1.25 "Outfit";
 $text-preset-3-semibold: 600 16px/1.25 "Outfit";
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

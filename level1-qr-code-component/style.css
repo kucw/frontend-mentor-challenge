@@ -7,7 +7,9 @@
   --text-preset-2: 400 15px/1.4 "Outfit";
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
