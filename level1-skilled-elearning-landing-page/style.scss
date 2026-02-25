@@ -168,17 +168,17 @@ header {
 /* Footer */
 footer {
   background-color: v.$blue-900;
-  padding: 24px 20px;
-
-  @include v.tablet {
-    padding: 24px 44px;
-  }
 }
 
 .footer-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 24px 20px;
+
+  @include v.tablet {
+    padding: 24px 44px;
+  }
 
   a {
     @include v.gradient-2;

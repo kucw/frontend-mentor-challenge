@@ -188,18 +188,18 @@ header a:hover {
 /* Footer */
 footer {
   background-color: #13183F;
-  padding: 24px 20px;
-}
-@media (min-width: 768px) {
-  footer {
-    padding: 24px 44px;
-  }
 }
 
 .footer-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 24px 20px;
+}
+@media (min-width: 768px) {
+  .footer-container {
+    padding: 24px 44px;
+  }
 }
 .footer-container a {
   background: linear-gradient(to bottom, #4851FF, #F02AA6);
