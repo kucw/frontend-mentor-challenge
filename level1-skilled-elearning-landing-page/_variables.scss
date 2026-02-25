@@ -11,8 +11,20 @@ $white: #FFFFFF;
   background: linear-gradient(to top, #F02AA6, #FF6F48);
 }
 
+@mixin gradient-1-light {
+  background:
+    linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    linear-gradient(to top, #F02AA6, #FF6F48);
+}
+
 @mixin gradient-2 {
   background: linear-gradient(to bottom, #4851FF, #F02AA6);
+}
+
+@mixin gradient-2-light {
+  background:
+    linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    linear-gradient(to bottom, #4851FF, #F02AA6);
 }
 
 @mixin gradient-3 {

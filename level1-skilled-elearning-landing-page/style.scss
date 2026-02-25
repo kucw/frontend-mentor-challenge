@@ -27,6 +27,10 @@ header {
     @include v.text-preset-7;
     color: v.$white;
     background-color: v.$blue-900;
+
+    &:hover {
+      background-color: v.$blue-600;
+    }
   }
 }
 
@@ -75,6 +79,10 @@ header {
       @include v.gradient-1;
       @include v.text-preset-7;
       color: v.$white;
+
+      &:hover {
+        @include v.gradient-1-light;
+      }
     }
   }
 
@@ -149,6 +157,10 @@ header {
       @include v.text-preset-7;
       color: v.$pink-600;
       text-decoration: none;
+
+      &:hover {
+        color: v.$pink-300;
+      }
     }
   }
 }
@@ -157,18 +169,25 @@ header {
 footer {
   background-color: v.$blue-900;
   padding: 24px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   @include v.tablet {
     padding: 24px 44px;
   }
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   a {
     @include v.gradient-2;
     @include v.text-preset-7;
     color: v.$white;
+
+    &:hover {
+      @include v.gradient-2-light;
+    }
   }
 }
 
@@ -178,7 +197,7 @@ footer {
   width: auto;
 }
 
-a.btn {
+.btn {
   text-decoration: none;
   padding: 16px 32px;
   border-radius: 28px;
