@@ -1,0 +1,131 @@
+/* Color */
+$blue-900: #13183F;
+$blue-600: #666CA3;
+$pink-600: #F74780;
+$pink-300: #FFA7C3;
+$grey: #83869A;
+$white: #FFFFFF;
+
+/* Gradient */
+@mixin gradient-1 {
+  background: linear-gradient(to top, #F02AA6, #FF6F48);
+}
+
+@mixin gradient-2 {
+  background: linear-gradient(to bottom, #4851FF, #F02AA6);
+}
+
+@mixin gradient-3 {
+  background: linear-gradient(to bottom, #FFFFFF, #F0F1FF);
+}
+
+/* Typography */
+$font-family: "Plus Jakarta Sans", sans-serif;
+@mixin text-preset-1 {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-1-mobile {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2-mobile {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3-mobile {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4-mobile {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-5 {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-6 {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-6-mobile {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-7 {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Screen */
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

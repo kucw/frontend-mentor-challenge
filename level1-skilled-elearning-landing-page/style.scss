@@ -1,0 +1,189 @@
+@use 'variables' as v;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: v.$white;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+
+  @include v.tablet {
+    padding: 24px 44px;
+  }
+
+  a {
+    @include v.text-preset-7;
+    color: v.$white;
+    background-color: v.$blue-900;
+  }
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 64px 20px;
+
+  @include v.tablet {
+    padding: 64px 44px;
+    flex-direction: row;
+    flex: 1;
+  }
+
+  // Hero Content (left part)
+  .hero-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+
+    @include v.tablet {
+      flex: 1;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      h1 {
+        @include v.text-preset-1-mobile;
+        color: v.$blue-900;
+      }
+
+      p {
+        @include v.text-preset-5;
+        color: v.$grey;
+      }
+    }
+
+    a {
+      @include v.gradient-1;
+      @include v.text-preset-7;
+      color: v.$white;
+    }
+  }
+
+  // Hero Image (right part)
+  .hero-image {
+    @include v.tablet {
+      flex: 1;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* Feature Section */
+.feature-container {
+  @include v.gradient-3;
+}
+
+.feature {
+  display: grid;
+  padding: 64px 20px 80px 20px;
+  gap: 32px;
+
+  @include v.tablet {
+    grid-template-columns: 1fr 1fr;
+    padding: 64px 44px 144px 44px;
+    gap: 32px 24px;
+  }
+
+  .checkout-card {
+    @include v.gradient-1;
+    @include v.text-preset-3-mobile;
+    color: v.$white;
+    padding: 32px;
+    border-radius: 15px;
+
+    @include v.tablet {
+      padding: 64px 32px 40px 32px;
+    }
+  }
+
+  .card {
+    background-color: v.$white;
+    margin: 28px 0 0 0;
+    border-radius: 15px;
+    box-shadow: 0 25px 50px 0 rgba(6, 22, 141, 0.0442);
+    padding: 64px 32px 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 32px;
+      top: -28px;
+    }
+
+    h2 {
+      @include v.text-preset-4-mobile;
+      color: v.$blue-900;
+    }
+
+    p {
+      @include v.text-preset-5;
+      color: v.$grey;
+    }
+
+    a {
+      @include v.text-preset-7;
+      color: v.$pink-600;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Footer */
+footer {
+  background-color: v.$blue-900;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include v.tablet {
+    padding: 24px 44px;
+  }
+
+  a {
+    @include v.gradient-2;
+    @include v.text-preset-7;
+    color: v.$white;
+  }
+}
+
+/* Common */
+.logo {
+  height: 20px;
+  width: auto;
+}
+
+a.btn {
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 28px;
+}
+
+.max-1120 {
+  max-width: 1120px;
+  margin: 0 auto;
+}
