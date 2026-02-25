@@ -53,6 +53,7 @@ header a {
 .hero .hero-content {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
   gap: 40px;
 }
