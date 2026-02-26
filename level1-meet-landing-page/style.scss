@@ -17,6 +17,10 @@ header {
   padding: 48px 80px 0 80px;
   display: flex;
   justify-content: center;
+
+  @include v.desktop {
+    padding: 80px 80px 0 80px;
+  }
 }
 
 /* Hero section */
@@ -33,7 +37,7 @@ header {
   }
 
   @include v.desktop {
-    grid-template-columns: 350px 1fr 350px;
+    grid-template-columns: 1fr 2fr 1fr;
     padding: 64px 0;
     gap: 32px;
   }
