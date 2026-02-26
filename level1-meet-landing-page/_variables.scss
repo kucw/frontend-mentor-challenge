@@ -1,0 +1,122 @@
+/* Color */
+$cyan-600: #4D96A9;
+$cyan-300: #8FE3F9;
+$cyan-hover: #71C0D4;
+$purple-600: #855FB1;
+$purple-300: #D9B8FF;
+$purple-hover: #B18BDD;
+$slate-900: #28283D;
+$slate-600: #87879D;
+$slate-300: #D1D1DF;
+$white: #FAFAFA;
+
+/* Typography */
+$font-family: "Red Hat Display", sans-serif;
+@mixin text-preset-1 {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-1-tablet {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-1-mobile {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2-tablet {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2-mobile {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 4px;
+}
+
+@mixin text-preset-3-tablet {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 4px;
+}
+
+@mixin text-preset-3-mobile {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 4px;
+}
+
+@mixin text-preset-4 {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4-tablet {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-5 {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Screen */
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

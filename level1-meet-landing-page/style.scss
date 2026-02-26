@@ -1,0 +1,352 @@
+@use 'variables' as v;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: v.$white;
+}
+
+/* Header */
+header {
+  padding: 48px 80px 0 80px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Hero section */
+.hero {
+  padding: 64px 32px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 48px;
+
+  @include v.tablet {
+    gap: 72px;
+  }
+
+  @include v.desktop {
+    grid-template-columns: 350px 1fr 350px;
+    padding: 64px 0;
+    gap: 32px;
+  }
+
+  // hero image
+  .hero-image-mobile {
+    width: 100%;
+
+    @include v.desktop {
+      display: none;
+    }
+  }
+
+  .hero-image-desktop {
+    display: none;
+
+    @include v.desktop {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  // hero content
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+
+    @include v.tablet {
+      max-width: 448px;
+    }
+
+    h1 {
+      @include v.text-preset-1-mobile;
+      color: v.$slate-900;
+
+      @include v.tablet {
+        @include v.text-preset-1-tablet;
+      }
+
+      @include v.desktop {
+        @include v.text-preset-1;
+      }
+    }
+
+    p {
+      @include v.text-preset-4-tablet;
+      color: v.$slate-600;
+
+      @include v.tablet {
+        @include v.text-preset-4-tablet;
+      }
+
+      @include v.desktop {
+        @include v.text-preset-4;
+      }
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @include v.tablet {
+        flex-direction: row;
+      }
+
+      .download-btn {
+        background-color: v.$cyan-600;
+        color: v.$white;
+        @include v.text-preset-5;
+
+        &:hover {
+          background-color: v.$cyan-hover;
+        }
+
+        span {
+          margin-left: 4px;
+          color: v.$cyan-300;
+        }
+      }
+
+      .what-btn {
+        background-color: v.$purple-600;
+        color: v.$white;
+        @include v.text-preset-5;
+
+        &:hover {
+          background-color: v.$purple-hover;
+        }
+      }
+    }
+  }
+}
+
+/* Feature section */
+.feature {
+  padding: 32px 32px 64px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+
+  @include v.tablet {
+    padding: 56px 32px 64px 32px;
+  }
+
+  @include v.desktop {
+    padding: 56px 80px 72px 80px;
+  }
+
+  .feature-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    @include v.tablet {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include v.desktop {
+      gap: 32px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  .feature-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+
+    @include v.tablet {
+      max-width: 544px;
+    }
+
+    .feature-title {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @include v.tablet {
+        width: 87%;
+      }
+
+      span {
+        @include v.text-preset-3-mobile;
+        color: v.$cyan-600;
+        text-transform: uppercase;
+
+        @include v.tablet {
+          @include v.text-preset-3-tablet;
+        }
+
+        @include v.desktop {
+          @include v.text-preset-3;
+        }
+      }
+
+      h2 {
+        @include v.text-preset-2-mobile;
+        color: v.$slate-900;
+
+        @include v.tablet {
+          @include v.text-preset-2-tablet;
+        }
+
+        @include v.desktop {
+          @include v.text-preset-2;
+        }
+      }
+    }
+
+    p {
+      @include v.text-preset-4-tablet;
+      color: v.$slate-600;
+
+      @include v.desktop {
+        @include v.text-preset-4;
+      }
+    }
+  }
+}
+
+/* Footer */
+footer {
+  margin-top: -28px;
+  padding: 64px 32px;
+  background:
+    linear-gradient(rgba(77, 150, 168, 0.9), rgba(77, 150, 168, 0.9)),
+    url("images/mobile/image-footer.jpg")
+    top / cover
+    no-repeat;
+
+  @include v.tablet {
+    background:
+      linear-gradient(rgba(77, 150, 168, 0.9), rgba(77, 150, 168, 0.9)),
+      url("images/tablet/image-footer.jpg")
+      top / cover
+      no-repeat;
+  }
+
+  @include v.desktop {
+    padding: 112px 80px;
+    background:
+      linear-gradient(rgba(77, 150, 168, 0.9), rgba(77, 150, 168, 0.9)),
+      url("images/desktop/image-footer.jpg")
+      top / cover
+      no-repeat;
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+
+  @include v.tablet {
+    width: 67%;
+  }
+
+  @include v.desktop {
+    width: 100%;
+    flex-direction: row;
+    text-align: left;
+    gap: 32px;
+  }
+
+  h2 {
+    @include v.text-preset-2-mobile;
+    color: v.$white;
+
+    @include v.tablet {
+      @include v.text-preset-2-tablet;
+    }
+
+    @include v.desktop {
+      @include v.text-preset-2;
+    }
+  }
+
+  p {
+    @include v.text-preset-4-tablet;
+    color: v.$white;
+
+    @include v.desktop {
+      @include v.text-preset-4;
+    }
+  }
+
+  .download-btn {
+    background-color: v.$purple-600;
+    color: v.$white;
+    @include v.text-preset-5;
+
+    @include v.desktop {
+      justify-self: flex-end;
+    }
+
+    &:hover {
+      background-color: v.$purple-hover;
+    }
+
+    span {
+      margin-left: 4px;
+      color: v.$purple-300;
+    }
+  }
+}
+
+/* Common */
+.btn {
+  padding: 16px 40px;
+  text-decoration: none;
+  border-radius: 29px;
+}
+
+.vertical-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .line {
+    width: 1px;
+    height: 80px;
+    background-color: v.$slate-300;
+  }
+
+  .number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid v.$slate-300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include v.text-preset-5;
+    color: v.$slate-600;
+    background-color: v.$white;
+  }
+}
+
+.max-1120 {
+  max-width: 1120px;
+  margin: 0 auto;
+}
