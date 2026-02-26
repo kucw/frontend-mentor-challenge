@@ -382,11 +382,6 @@ footer {
   line-height: 1.5;
   letter-spacing: 0;
 }
-@media (min-width: 1200px) {
-  .footer-container .download-btn {
-    justify-self: flex-end;
-  }
-}
 .footer-container .download-btn:hover {
   background-color: #B18BDD;
 }

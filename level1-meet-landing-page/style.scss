@@ -299,10 +299,6 @@ footer {
     color: v.$white;
     @include v.text-preset-5;
 
-    @include v.desktop {
-      justify-self: flex-end;
-    }
-
     &:hover {
       background-color: v.$purple-hover;
     }
