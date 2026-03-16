@@ -48,13 +48,12 @@ body {
 
   /* Question */
   .question {
-    cursor: pointer;
-
     .title {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      cursor: pointer;
 
       h2 {
         @include v.text-preset-2;
@@ -71,6 +70,8 @@ body {
     .answer {
       @include v.text-preset-3;
       color: v.$purple-600;
+
+      // 神寫法，強制把整個 answer 區塊的 height 設成 0，然後再把超出 height 的部分 hidden，這樣就可以做到隱藏的效果
       max-height: 0;
       overflow: hidden;
     }

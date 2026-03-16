@@ -50,14 +50,12 @@ body {
   gap: 24px;
   /* Question */
 }
-.questions .question {
-  cursor: pointer;
-}
 .questions .question .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  cursor: pointer;
 }
 .questions .question .title h2 {
   font-family: "Work Sans", sans-serif;
