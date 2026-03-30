@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "level1-faq-accordion-angular": {
+    "level1-faq-accordion": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "level1-faq-accordion-angular:build:production"
+              "buildTarget": "level1-faq-accordion:build:production"
             },
             "development": {
-              "buildTarget": "level1-faq-accordion-angular:build:development"
+              "buildTarget": "level1-faq-accordion:build:development"
             }
           },
           "defaultConfiguration": "development"
