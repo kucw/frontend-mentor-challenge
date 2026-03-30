@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="header">
+    <img src="icon-star.svg" alt="icon star">
+    <h1>FAQs</h1>
+  </div>
+  <div class="questions">
+    @for (faq of faqs; track faq.id; let isLast = $last) {
+      <!-- 根據 fag.isOpen 決定現在要不要 show answer（在 answer 上加 active class）、要呈現哪張 icon-->
+      <div class="question">
+        <div class="title" (click)="onFaqClick(faq)">
+          <h2>{{ faq.title }}</h2>
+          <img [src]="faqIcon(faq.isOpen)" alt="faq icon">
+        </div>
+        <p class="answer" [class.active]="faq.isOpen">{{ faq.answer }}</p>
+      </div>
+
+      <!-- 不是最後一個 faq 的話，就要加分隔線 divider -->
+      @if (!isLast) {
+        <div class="divider"></div>
+      }
+    }
+  </div>
+</div>

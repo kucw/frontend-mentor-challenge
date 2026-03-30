@@ -1,24 +1,8 @@
-@use 'variables' as v;
-
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: v.$purple-100;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@use '../variables' as *;
 
 /* Card */
 .card {
-  background-color: v.$white;
+  background-color: $white;
   width: 87%;
   max-width: 600px;
   padding: 40px;
@@ -36,7 +20,7 @@ body {
   align-items: center;
 
   h1 {
-    @include v.text-preset-1;
+    @include text-preset-1;
   }
 }
 
@@ -56,20 +40,20 @@ body {
       cursor: pointer;
 
       h2 {
-        @include v.text-preset-2;
-        color: v.$purple-950;
+        @include text-preset-2;
+        color: $purple-950;
       }
 
       &:hover {
         h2 {
-          color: v.$violet-600;
+          color: $violet-600;
         }
       }
     }
 
     .answer {
-      @include v.text-preset-3;
-      color: v.$purple-600;
+      @include text-preset-3;
+      color: $purple-600;
 
       // 神寫法，強制把整個 answer 區塊的 height 設成 0，然後再把超出 height 的部分 hidden，這樣就可以做到隱藏的效果
       max-height: 0;
@@ -85,7 +69,7 @@ body {
   /* Divider */
   .divider {
     height: 1px;
-    background: v.$purple-100;
+    background: $purple-100;
   }
 }
 
