@@ -1,0 +1,234 @@
+/* Color */
+/* Gradient */
+/* Typography */
+/* Screen */
+/* Rating Card */
+.rating-card {
+  background: radial-gradient(circle at top, #232A34, #181827);
+  max-width: 327px;
+  width: 87%;
+  padding: 24px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .rating-card {
+    max-width: 412px;
+    padding: 32px 24px;
+    gap: 32px;
+  }
+}
+.rating-card img {
+  width: 40px;
+  height: 40px;
+  padding: 13px;
+  background-color: #262E38;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .rating-card img {
+    width: 48px;
+    height: 48px;
+    padding: 16px;
+  }
+}
+.rating-card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rating-card .content h1 {
+  color: #FFFFFF;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  .rating-card .content h1 {
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0;
+  }
+}
+.rating-card .content p {
+  color: #969FAD;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  .rating-card .content p {
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+}
+.rating-card .content .rating-btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.rating-card .content .rating-btns .rating-btn {
+  width: 43px;
+  height: 43px;
+  background-color: #262E38;
+  color: #969FAD;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.87px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .rating-card .content .rating-btns .rating-btn {
+    width: 51px;
+    height: 51px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+}
+.rating-card .content .rating-btns .rating-btn:hover {
+  background-color: #FFFFFF;
+  color: #262E38;
+}
+.rating-card .content .rating-btns .selected {
+  background-color: #FC7614;
+  color: #262E38;
+}
+.rating-card .submit-btn {
+  background-color: #FC7614;
+  color: #262E38;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1.87px;
+  text-transform: uppercase;
+  border: none;
+  width: 100%;
+  height: 47px;
+  border-radius: 22.5px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .rating-card .submit-btn {
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.17px;
+    height: 49px;
+  }
+}
+.rating-card .submit-btn:hover {
+  background-color: #FFFFFF;
+  color: #262E38;
+}
+
+/* Thank you Card */
+.thankyou-card {
+  background: radial-gradient(circle at top, #232A34, #181827);
+  max-width: 327px;
+  width: 87%;
+  padding: 32px 24px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .thankyou-card {
+    max-width: 412px;
+    padding: 40px 32px;
+    gap: 32px;
+  }
+}
+.thankyou-card img {
+  max-width: 144px;
+}
+@media (min-width: 768px) {
+  .thankyou-card img {
+    max-width: 162px;
+  }
+}
+.thankyou-card span {
+  background-color: #262E38;
+  color: #FC7614;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+  padding: 6px 16px;
+  border-radius: 22.5px;
+}
+@media (min-width: 768px) {
+  .thankyou-card span {
+    padding: 8px 20px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+}
+.thankyou-card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+.thankyou-card .content h2 {
+  color: #FFFFFF;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  .thankyou-card .content h2 {
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0;
+  }
+}
+.thankyou-card .content p {
+  color: #969FAD;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0;
+}
+@media (min-width: 768px) {
+  .thankyou-card .content p {
+    font-family: "Overpass", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */
