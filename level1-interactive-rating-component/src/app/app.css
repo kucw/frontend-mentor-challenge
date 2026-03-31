@@ -104,7 +104,7 @@
     letter-spacing: 0.2px;
   }
 }
-.rating-card .content .rating-btns .rating-btn:hover {
+.rating-card .content .rating-btns .rating-btn:hover, .rating-card .content .rating-btns .rating-btn:focus {
   background-color: #FFFFFF;
   color: #262E38;
 }
@@ -137,7 +137,7 @@
     height: 49px;
   }
 }
-.rating-card .submit-btn:hover {
+.rating-card .submit-btn:hover, .rating-card .submit-btn:focus {
   background-color: #FFFFFF;
   color: #262E38;
 }
