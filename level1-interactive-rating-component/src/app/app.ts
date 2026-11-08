@@ -1,26 +1,19 @@
-import {Component, signal, WritableSignal} from '@angular/core';
+import {Component, signal} from '@angular/core';
+import {RatingCard} from "../rating-card/rating-card";
+import {ThankYouCard} from "../thank-you-card/thank-you-card";
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [RatingCard, ThankYouCard],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class AppComponent {
-  selectedBtn = signal<number | null>(null);
-  isSubmit = signal(false);
+  isSubmit = signal(false)
+  submittedRating = signal(0)
 
-  onRatingBtnClick(id: number) {
-    this.selectedBtn.set(id);
-  }
-
-  isSelected(id: number): boolean {
-    return this.selectedBtn() === id
-  }
-
-  // 當 submit button 被點擊時，就改 isSubmit 的狀態
-  // 讓 HTML 自己去根據當前狀態決定要 show rating card 還是 thank you card
-  onSubmitBtnClick() {
-    this.isSubmit.set(true);
+  onRatingSubmit(rating: number) {
+    this.isSubmit.set(true)
+    this.submittedRating.set(rating)
   }
 }

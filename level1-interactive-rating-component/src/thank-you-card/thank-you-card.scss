@@ -1,0 +1,66 @@
+@use '../variables' as *;
+
+/* Thank you Card */
+.thankyou-card {
+  @include gradient;
+  max-width: 327px;
+  width: 87%;
+  padding: 32px 24px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+
+  @include tablet {
+    max-width: 412px;
+    padding: 40px 32px;
+    gap: 32px;
+  }
+
+  img {
+    max-width: 144px;
+
+    @include tablet {
+      max-width: 162px;
+    }
+  }
+
+  span {
+    background-color: $grey-900;
+    color: $orange-500;
+    @include text-preset-5-regular;
+    padding: 6px 16px;
+    border-radius: 22.5px;
+
+    @include tablet {
+      padding: 8px 20px;
+      @include text-preset-4-regular;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+
+    h2 {
+      color: $white;
+      @include text-preset-2;
+
+      @include tablet {
+        @include text-preset-1;
+      }
+    }
+
+    p {
+      color: $grey-500;
+      @include text-preset-5-regular;
+
+      @include tablet {
+        @include text-preset-4-regular;
+      }
+    }
+  }
+}
