@@ -1,0 +1,45 @@
+<h1>Desserts</h1>
+<div class="product-list">
+  @for (product of products(); track product.id) {
+    <div class="card">
+      <div class="profile">
+        <!-- 根據不同螢幕大小，選擇不同的圖片 -->
+        <picture>
+          <!-- Tablet -->
+          <source media="(min-width: 768px) and (max-width: 1199px)"
+                  [srcset]="product.image.tablet" />
+          <!-- Desktop -->
+          <source media="(min-width: 1200px)"
+                  [srcset]="product.image.desktop" />
+          <!-- Mobile (default) -->
+          <!-- 順便根據此 prodct 是否有在購物車，決定是否要顯示 red 邊框-->
+          <img [src]="product.image.mobile" [class.selected]="isInCart(product.id)" alt="product image" />
+        </picture>
+        
+        <!-- 如果 button 還沒被加入購物車，就顯示 add to cart button，否則顯示 -  1  + 的 button -->
+        @if (!isInCart(product.id)) {
+          <button class="add-to-cart" (click)="onAddToCartClick(product.id)">
+            <img src="icon-add-to-cart.svg" alt="icon-add-to-cart">
+            Add to Cart
+          </button>
+        } @else {
+          <div class="minus-and-plus">
+            <button class="minus-btn" (click)="onDecrementQuantity(product.id)">
+              <img src="icon-decrement-quantity.svg" alt="icon-decrement-quantity"/>
+            </button>
+            <p>{{ getQuantity(product.id) }}</p>
+            <button class="plus-btn" (click)="onIncrementQuantity(product.id)">
+              <img src="icon-increment-quantity.svg" alt="icon-increment-quantity"/>
+            </button>
+          </div>
+        }
+      
+      </div>
+      <div class="info">
+        <span class="category">{{ product.category }}</span>
+        <p class="name">{{ product.name }}</p>
+        <p class="price">${{ product.price | number:'1.2-2' }}</p>
+      </div>
+    </div>
+  }
+</div>

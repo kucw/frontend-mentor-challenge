@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  // 全局清除所有元素的點擊反白顏色
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: $rose-50;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

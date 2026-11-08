@@ -1,0 +1,129 @@
+@use '../variables' as *;
+
+h1 {
+  color: $rose-900;
+  @include text-preset-1;
+  margin: 0 0 32px 0;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    column-gap: 24px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .profile {
+    // 強制下面空出 22px 且 relative，等等給 add to cart button 用
+    margin: 0 0 22px 0;
+    position: relative;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+
+      &.selected {
+        border: 2px solid $red;
+      }
+    }
+
+    // Add to Cart button
+    .add-to-cart {
+      color: $rose-900;
+      @include text-preset-4-bold;
+      background-color: $white;
+      padding: 12px 12px;
+      border-radius: 999px;
+      border: 1px solid $rose-400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 160px;
+      cursor: pointer;
+
+      // 強制往下凸出去且水平置中
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    // - 和 + 的 button 組合
+    .minus-and-plus {
+      color: $white;
+      @include text-preset-4-bold;
+      background-color: $red;
+      padding: 12px 12px;
+      border-radius: 999px;
+      border: 1px solid $red;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      width: 160px;
+      // 強制往下凸出去且水平置中
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .minus-btn, .plus-btn {
+        cursor: pointer;
+        color: $white;
+        @include text-preset-4-bold;
+        background-color: $red;
+        border-radius: 50%;
+        border: 1px solid $white;
+        display: flex;
+        align-items: center;
+        padding: 3px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .category {
+      color: $rose-500;
+      @include text-preset-4;
+    }
+
+    .name {
+      color: $rose-900;
+      @include text-preset-3;
+    }
+
+    .price {
+      color: $red;
+      @include text-preset-3;
+    }
+  }
+}
+
+

@@ -1,0 +1,23 @@
+@use '../variables' as *;
+
+:host {
+  margin: 24px 0;
+  width: 87%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  justify-content: center;
+  gap: 32px;
+
+  @include tablet {
+    margin: 40px 0;
+    width: 89%;
+  }
+
+  @include desktop {
+    margin: 88px 0;
+    width: 84%;
+    grid-template-columns: 2.1fr 1fr;
+    gap: 32px;
+  }
+}

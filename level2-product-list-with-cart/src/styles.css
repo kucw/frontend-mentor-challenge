@@ -1,3 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+/* Color */
+/* Typography */
+/* Screen */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+app-root {
+  background-color: #FCF8F6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /*# sourceMappingURL=styles.css.map */

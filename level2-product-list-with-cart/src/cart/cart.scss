@@ -1,0 +1,143 @@
+@use '../variables' as *;
+
+
+.cart-card {
+  background: $white;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  h1 {
+    color: $red;
+    @include text-preset-2;
+  }
+
+  // 萬惡的 item 組合...細節也太多也太複雜了
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .item-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .name {
+          color: $rose-900;
+          @include text-preset-4-bold;
+        }
+
+        .price-info {
+          display: flex;
+          gap: 8px;
+
+          .quantity {
+            color: $red;
+            @include text-preset-4-bold;
+          }
+
+          .price {
+            color: $rose-500;
+            @include text-preset-4;
+          }
+
+          .total-price {
+            color: $rose-500;
+            @include text-preset-4-bold;
+          }
+        }
+      }
+
+      .remove-item-btn {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+        border-radius: 50%;
+        border: 1px solid $rose-400;
+        color: $rose-400;
+        background: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background: $rose-100;
+  }
+
+  .order-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      color: $rose-900;
+      @include text-preset-4;
+    }
+
+    span {
+      color: $rose-900;
+      @include text-preset-2;
+    }
+  }
+
+  .carbon-neutral-delivery {
+    background: $rose-50;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+
+    p {
+      color: $rose-900;
+      @include text-preset-4;
+
+      span {
+        @include text-preset-4-bold;
+      }
+    }
+  }
+
+  .confirm-order {
+    background: $red;
+    color: $white;
+    @include text-preset-3;
+    border-radius: 999px;
+    border: none;
+    padding: 16px 24px;
+    cursor: pointer;
+  }
+
+  /* 還沒加任何東西時呈現的內容 */
+  .empty-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 0;
+
+    img {
+      width: 128px;
+      height: 128px;
+    }
+
+    p {
+      color: $rose-500;
+      @include text-preset-4-bold;
+    }
+  }
+}
