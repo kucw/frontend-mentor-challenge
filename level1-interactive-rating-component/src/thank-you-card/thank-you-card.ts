@@ -7,5 +7,5 @@ import {Component, input} from "@angular/core";
   styleUrl: "./thank-you-card.scss",
 })
 export class ThankYouCard {
-  rating = input.required<number>()
+  rating = input.required<number>();
 }

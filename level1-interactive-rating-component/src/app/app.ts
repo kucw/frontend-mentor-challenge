@@ -9,11 +9,11 @@ import {ThankYouCard} from "../thank-you-card/thank-you-card";
   styleUrl: './app.scss'
 })
 export class AppComponent {
-  isSubmit = signal(false)
-  submittedRating = signal(0)
+  isSubmit = signal(false);
+  submittedRating = signal(0);
 
   onRatingSubmit(rating: number) {
-    this.isSubmit.set(true)
-    this.submittedRating.set(rating)
+    this.isSubmit.set(true);
+    this.submittedRating.set(rating);
   }
 }
