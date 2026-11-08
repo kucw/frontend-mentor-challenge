@@ -1,0 +1,66 @@
+/* Color */
+$white: #FFFFFF;
+$black: #000000;
+$red: #C73B0F;
+$rose-900: #260F08;
+$rose-500: #87635A;
+$rose-400: #AD8A85;
+$rose-300: #CAAFA7;
+$rose-100: #F5EEEC;
+$rose-50: #FCF8F6;
+$green: #1EA575;
+
+/* Typography */
+$font-family: "Red Hat Text", sans-serif;
+@mixin text-preset-1 {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4-bold {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+/* Screen */
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
