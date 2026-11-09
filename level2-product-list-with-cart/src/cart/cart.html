@@ -1,20 +1,20 @@
 <div class="cart-card">
-  <h1>Your Cart({{ cartItems().length }})</h1>
+  <h1>Your Cart({{ cartService.cartTotalQuantity() }})</h1>
   
   <!-- 遍歷購物車，如果購物車中沒東西就顯示 empty 的頁面 -->
-  @if (!isCartEmpty()) {
+  @if (cartService.cartTotalQuantity() !== 0) {
     <div class="item-list">
-      @for (item of cartItems(); track item.productId) {
+      @for (item of cartService.getCartItems(); track item.id) {
         <div class="item">
           <div class="item-info">
-            <p class="name">{{ item.productName }}</p>
+            <p class="name">{{ item.name }}</p>
             <div class="price-info">
-              <p class="quantity">{{ item.quantity }}x</p>
+              <p class="quantity">{{ item.quantity }}</p>
               <p class="price">@ {{ item.price | number:'1.2-2' }}</p>
-              <p class="total-price">${{ item.totalPrice | number:'1.2-2' }}</p>
+              <p class="total-price">${{ item.quantity * item.price | number:'1.2-2' }}</p>
             </div>
           </div>
-          <button class="remove-item-btn" (click)="removeCartItem(item.productId)">
+          <button class="remove-item-btn" (click)="cartService.onRemoveProduct(item.id)">
             <img src="icon-remove-item.svg" alt="icon-remove-item">
           </button>
         </div>
@@ -28,7 +28,7 @@
     <div class="divider"></div>
     <div class="order-total">
       <p>Order Total</p>
-      <span>${{ totalAmount() | number:'1.2-2' }}</span>
+      <span>${{ this.cartService.cartTotalPrice() | number:'1.2-2' }}</span>
     </div>
     <div class="carbon-neutral-delivery">
       <img src="icon-carbon-neutral.svg" alt="icon-carbon-neutral">
