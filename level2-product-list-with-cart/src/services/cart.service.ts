@@ -90,4 +90,11 @@ export class CartService {
       return newCart;
     });
   }
+
+  // 全部狀態清空重來
+  reset() {
+    this.cartTotalQuantity.set(0);
+    this.cartTotalPrice.set(0);
+    this.cart.set(new Map());
+  }
 }

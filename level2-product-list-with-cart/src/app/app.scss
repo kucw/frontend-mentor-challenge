@@ -21,3 +21,39 @@
     gap: 32px;
   }
 }
+
+// 暫放的 order confirmed dialog，懶的創一個新的 Component 了
+.order-confirmed {
+  // 把 dialog 放在正中間
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  // dialog 本人的大小和顏色
+  width: min(90%, 520px);
+  padding: 40px 36px;
+  background: white;
+  border-radius: 12px;
+
+  // 把 dialog 以外的區域全部加個灰色陰影
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+
+  h2 {
+    color: $rose-900;
+    @include text-preset-1;
+    margin: 0 0 32px 0;
+  }
+
+  button {
+    background: $red;
+    color: $white;
+    @include text-preset-3;
+    border-radius: 999px;
+    border: none;
+    width: 100%;
+    padding: 16px 24px;
+    cursor: pointer;
+  }
+}

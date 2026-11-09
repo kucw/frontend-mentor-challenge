@@ -1,4 +1,4 @@
-import {Component, inject} from "@angular/core";
+import {Component, inject, output} from "@angular/core";
 import {DecimalPipe} from "@angular/common";
 import {CartService} from "../services/cart.service";
 
@@ -10,4 +10,11 @@ import {CartService} from "../services/cart.service";
 })
 export class CartComponent {
   cartService = inject(CartService);
+
+  // 用 output 發送一個 event，表示使用者點了 order complete 按鈕
+  orderComplete = output<void>();
+
+  onOrderComplete() {
+    this.orderComplete.emit();
+  }
 }
